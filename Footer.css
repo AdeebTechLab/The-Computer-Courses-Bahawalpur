@@ -1,0 +1,153 @@
+
+
+    /* ===== Footer Styling ===== */
+.footer {
+  background-color: black;
+  color: #ffffff;
+  padding: 60px 50px 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 70px auto 0;
+  text-align: center;
+}
+
+/* === About Section === */
+.footer-about {
+  flex: 1 1 250px;
+}
+
+.footer-about h2 {
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+}
+
+.footer-about p {
+  color: #e6eef8;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* === Links Section === */
+.footer-links {
+  flex: 1 1 180px;
+}
+
+.footer-links h3 {
+  color: #ffffff;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 8px 0;
+}
+
+.footer-links ul li a {
+  color: #e6eef8;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #9fd8ff;
+  padding-left: 5px;
+}
+
+/* === Contact Section === */
+.footer-contact {
+  flex: 1 1 250px;
+  text-align: center;
+}
+
+.footer-contact h3 {
+  color: #ffffff;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.footer-contact p {
+  color: #e6eef8;
+  font-size: 0.95rem;
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.footer-contact i {
+  color: #e6eef8;
+  flex-shrink: 0;
+  min-width: 20px;
+}
+
+/* === Social Section === */
+.footer-social {
+  flex: 1 1 200px;
+  text-align: center;
+}
+
+.footer-social h3 {
+  color: #ffffff;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 8px;
+  color: #ffffff;
+  font-size: 20px;
+  transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #9fd8ff;
+  transform: scale(1.2);
+}
+
+/* === Footer Bottom === */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #1f2833;
+  margin-top: 40px;
+  padding-top: 20px;
+}
+
+.footer-bottom p {
+  color: #d8eaf6;
+  font-size: 0.9rem;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-about,
+  .footer-links,
+  .footer-contact,
+  .footer-social {
+    flex: 1 1 100%;
+  }
+
+  .footer-links ul li a:hover {
+    padding-left: 0;
+  }
+}

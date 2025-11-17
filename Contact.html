@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-1024, user-scalable=1" />
+  <title>Contact Us - Computer Courses</title>
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+  <link rel="stylesheet" href="Contact.css" />
+  <link rel="stylesheet" href="Header.css" />
+  <link rel="stylesheet" href="Footor.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+
+
+   <!-- Header section -->
+   <header id="header-container"></header>
+
+
+
+   <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="contact-header">
+      <h1>Contact <span>Us</span></h1>
+      <p>We’re here to help! Reach out for any questions or collaborations.</p>
+    </div>
+
+    <div class="contact-container">
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <h2>Send Us a Message</h2>
+        <form>
+          <div class="input-box">
+            <input type="text" required>
+            <label>Full Name</label>
+          </div>
+          <div class="input-box">
+            <input type="email" required>
+            <label>Email Address</label>
+          </div>
+          <div class="input-box">
+            <textarea required></textarea>
+            <label>Your Message</label>
+          </div>
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h2>Contact</h2>
+        <p><i class="fas fa-phone"></i> +92 309 2333121</p>
+        <p><i class="fas fa-envelope"></i> info.pcskills@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Bhatta No#1 Chowk, Gulberg Road, Abbas Colony Street No# 2, Adeeb Technology Lab, Bahawalpur, Pakistan</p>
+
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps?q=Bhatta%20No%201%20Chowk%20Gulberg%20Road%20Abbas%20Colony%20Bahawalpur&output=embed"
+            width="100%"
+            height="250"
+            style="border:0;"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+<section class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-container">
+
+    <div class="faq-item">
+      <button class="faq-question">What is the class time table?</button>
+      <div class="faq-answer">
+        <strong>Office Opening Timing:</strong><br><br>
+        Time: 10:00 AM to 8:00 PM<br><br>
+        <strong>Onsite Classes Timing:</strong><br><br>
+        Morning Class: 11:00 AM to 01:00 PM<br>
+        Break: 01:00 PM to 02:00 PM<br>
+        Evening Class: 03:00 PM to 05:00 PM<br><br>
+        <strong>Online Classes Timing:</strong><br><br>
+        Class 1: 10:00 AM to 12:00 PM<br>
+        Class 2: 01:30 PM to 02:30 PM<br>
+        Class 3: 10:00 PM to 11:00 PM
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Who Should Take an Online Course?</button>
+      <div class="faq-answer">
+        Anyone who have their own laptop and personal wifi should be able to take an online course
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How Do I Access My Course?</button>
+      <div class="faq-answer">
+        Once you enroll, you’ll receive a login link or student portal access through email or WhatsApp. You can study anytime using your phone, tablet, or computer.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can I Take More than One Course at a Time?</button>
+      <div class="faq-answer">
+        No, you can't. Just one course at a same time
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">My Payment Did Not Go Through. What Do I Do?</button>
+      <div class="faq-answer">
+        Bank Name: HBL<br>
+        Owner Name: Salman<br>
+        Account No: 14737991982703<br><br>
+        After completing the payment send screenshot to WhatsApp No:<br>
+        03 3939 00 444
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What are the benefits after completing the course?</button>
+      <div class="faq-answer">
+        After completing the course, you’ll receive a certificate based on your progress. This certificate will add a strong impact to your CV and improve your professional profile.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+   <!-- ======= Footer Section ======= -->
+<footer id="footer-container"></footer>
+
+
+
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<script>
+// Load Header from Header.html
+fetch('./Header.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('header-container').innerHTML = data;
+  })
+  .catch(error => console.error('Error loading header:', error));
+
+// Load Footer from Footer.html
+fetch('./Footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('footer-container').innerHTML = data;
+  })
+  .catch(error => console.error('Error loading footer:', error));
+</script>
+
+  <script>
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const faqItem = button.parentElement;
+      const answer = faqItem.querySelector('.faq-answer');
+      const isActive = faqItem.classList.contains('active');
+
+      // Close all
+      document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('active');
+        item.querySelector('.faq-question').classList.remove('active');
+        item.querySelector('.faq-answer').style.maxHeight = null;
+      });
+
+      // Toggle current
+      if (!isActive) {
+        faqItem.classList.add('active');
+        button.classList.add('active');
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
